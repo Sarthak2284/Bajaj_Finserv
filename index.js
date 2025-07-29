@@ -25,7 +25,9 @@ function alternatingCaps(str) {
     }
     return res;
 }
-
+app.get('/', (req, res) => {
+    res.send('Welcome to the API! Use POST /bfhl with an array of data.');
+})
 app.post('/bfhl', (req, res)=>{
     try{
         const {data} = req.body;
